@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portal</title>
+    <style>
+      h2 {
+        background-color: black;
+        color: white;
+        /* width: 1512px; */
+        width: 100%;
+        height: 76px;
+        left: 21px;
+        line-height: 29.05px;
+        font-weight: 400;
+        font-size: 24px;
+      }
+      input[type="text"] {
+        width: 80%;
+        /* width: 1226px; */
+        height: 65px;
+        border: 1px solid black;
+        margin: 20px 0;
+        margin: 0 auto;
+      }
+      button {
+        margin-right: 30px;
+        width: 217px;
+        height: 66px;
+        background-color: black;
+        color: white;
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Student Portal</h2>
+    <input type="text" id="searchInput" placeholder="Search" />
+    <button onclick="handleSearch()">Search</button>
+    <br />
+    <div class="button-container">
+      <button type="button" onclick="sortByNameAsc()">Sort A->Z</button>
+      <button type="button" onclick="sortByNameDesc()">Sort Z->A</button>
+      <button type="button" onclick="sortByMarks()">Sort By Marks</button>
+      <button type="button" onclick="sortByPassing()">Sort By Passing</button>
+      <button type="button" onclick="sortByClass()">Sort By Class</button>
+      <button type="button" onclick="sortByGender()">Sort By Gender</button>
+    </div>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Class</th>
+          <th>Marks</th>
+          <th>Passing</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <!-- Table body will be dynamically populated -->
+      <tbody></tbody>
+    </table>
+    <div id="genderTables"></div>
+
+    <script src="./file.js"></script>
+  </body>
+</html>
